@@ -26,5 +26,12 @@ println(GlobalVariable.baseUrl)
 
 WS.verifyResponseStatusCode(response, 201)
 
+// Print request details
+KeywordUtil.logInfo("=== REQUEST DETAILS ===")
+KeywordUtil.logInfo("Request URL: " + findTestObject('reqres.in/Create User').getRestUrl())
+KeywordUtil.logInfo("Request Method: " + findTestObject('reqres.in/Create User').getHttpBody())
+KeywordUtil.logInfo("Request Headers: " + findTestObject('reqres.in/Create User').getHttpHeaderProperties())
+KeywordUtil.logInfo("Request Body: " + findTestObject('reqres.in/Create User').getHttpBody())
+
 KeywordUtil.logInfo("Response Body: " + response.getResponseText())
 
